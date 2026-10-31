@@ -104,11 +104,19 @@ h3 { color: var(--muted); font-family: var(--sans); font-size: 16px; font-weight
 /* Footer */
 .site-footer { padding: 24px 52px 40px; border-top: 1px solid var(--rule); color: var(--muted); font-family: var(--sans); font-size: 14px; }
 
-html[lang="zh-Hans"] body { font-family: var(--sans); line-height: 1.8; }
-html[lang="zh-Hans"] h1, html[lang="zh-Hans"] .site-name, html[lang="zh-Hans"] .question blockquote, html[lang="zh-Hans"] .section > h2 { font-family: var(--serif); }
-html[lang="zh-Hans"] .question blockquote { line-height: 1.32; letter-spacing: 0; }
-html[lang="zh-Hans"] .paper-title { font-family: var(--serif); }
-.abstract[lang="en"] { font-family: var(--serif); }
+/* Chinese pages: Windows has no good serif for Chinese (it falls back to thin SimSun), so Chinese display text is sans.
+   Palatino stays for English titles and the English abstract. */
+html[lang="zh-Hans"] body { font-family: var(--sans); font-size: 17px; line-height: 1.75; }
+html[lang="zh-Hans"] .sidebar h1, html[lang="zh-Hans"] .site-name { font-weight: 600; letter-spacing: .04em; }
+html[lang="zh-Hans"] .name-zh { font-family: var(--serif); font-weight: 400; letter-spacing: 0; }
+html[lang="zh-Hans"] .question blockquote { max-width: 26em; font-size: clamp(24px, 2.5vw, 32px); line-height: 1.45; letter-spacing: 0; }
+html[lang="zh-Hans"] .section > h2 { font-size: 23px; font-weight: 600; }
+html[lang="zh-Hans"] .paper-title { font-size: 18px; font-weight: 600; line-height: 1.5; }
+html[lang="zh-Hans"] .paper-title[lang="en"], html[lang="zh-Hans"] .paper-heading { font-family: var(--serif); font-weight: 400; }
+html[lang="zh-Hans"] .paper-title[lang="en"] { font-size: 20px; line-height: 1.32; }
+html[lang="zh-Hans"] .jmp .paper-title[lang="en"] { font-size: 26px; line-height: 1.25; }
+html[lang="zh-Hans"] .byline { font-size: 15px; line-height: 1.65; }
+html[lang="zh-Hans"] .abstract[lang="en"] { font-family: var(--serif); font-size: 18px; line-height: 1.6; }
 
 /* Below this width the sidebar becomes the top of the page */
 @media (max-width: 860px) {
