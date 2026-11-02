@@ -79,6 +79,10 @@ h3 { color: var(--muted); font-family: var(--sans); font-size: 16px; font-weight
 .jmp { padding: 14px 0 0; border-top: 3px solid var(--ink); margin-top: 10px; }
 .jmp .paper-title { font-size: 26px; line-height: 1.25; }
 .jmp .abstract { margin-top: 14px; }
+#research .group + .group { margin-top: 28px; }
+#research .paper { margin-top: 14px; }
+#research .paper p { margin-top: 3px; }
+#research .jmp .abstract { margin-top: 10px; }
 
 /* Paper page */
 .findings { padding: 0; list-style: none; }
