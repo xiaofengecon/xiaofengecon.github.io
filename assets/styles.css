@@ -83,6 +83,12 @@ h3 { color: var(--muted); font-family: var(--sans); font-size: 16px; font-weight
 #research .paper { margin-top: 14px; }
 #research .paper p { margin-top: 3px; }
 #research .jmp .abstract { margin-top: 10px; }
+.abstract-fold { margin-top: 3px; }
+.abstract-fold summary { width: fit-content; color: var(--teal); cursor: pointer; font-family: var(--sans); font-size: 14px; font-weight: 600; line-height: 1.5; }
+.abstract-fold summary:hover { text-decoration: underline; text-underline-offset: .18em; }
+.abstract-fold summary:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; border-radius: 1px; }
+#research .abstract-fold p { margin: 6px 0 4px; padding-left: 14px; border-left: 2px solid var(--rule); font-size: 16px; line-height: 1.5; }
+@media (pointer: coarse) { .abstract-fold summary { padding-block: 10px; } }
 
 /* Paper page */
 .findings { padding: 0; list-style: none; }
@@ -156,4 +162,5 @@ html[lang="zh-Hans"] .abstract[lang="en"] { font-family: var(--serif); font-size
   .question a { color: #000; }
   main, .site-footer { padding-inline: 0; }
   .section { max-width: none; padding-block: 16pt; break-inside: avoid-page; }
+  .abstract-fold::details-content { display: block; content-visibility: visible; }
 }
