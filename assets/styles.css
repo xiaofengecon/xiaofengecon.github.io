@@ -148,6 +148,16 @@ html[lang="zh-Hans"] .jmp .paper-title[lang="en"] { font-size: 26px; line-height
 html[lang="zh-Hans"] .byline { font-size: 15px; line-height: 1.65; }
 html[lang="zh-Hans"] .abstract[lang="en"] { font-family: var(--serif); font-size: 18px; line-height: 1.6; }
 
+/* Wide screens: the navigation moves to a column right of the text and stays in view */
+.content > .rail-nav { display: none; }
+@media (min-width: 1320px) {
+  .content { display: grid; grid-template-columns: minmax(0, 824px) minmax(200px, 1fr); grid-template-rows: auto 1fr auto; }
+  .content > .question, .content > .site-footer { grid-column: 1 / -1; }
+  .content > main { grid-column: 1; grid-row: 2; }
+  .content > .rail-nav { display: grid; grid-column: 2; grid-row: 2; align-self: start; position: sticky; top: 24px; width: fit-content; min-width: 180px; margin: 24px 0 24px; padding: 2px 0 2px 20px; border-top: 0; border-left: 1px solid var(--rule); }
+  .sidebar .site-nav { display: none; }
+}
+
 /* Below this width the sidebar becomes the top of the page */
 @media (max-width: 860px) {
   .layout { grid-template-columns: minmax(0, 1fr); }
