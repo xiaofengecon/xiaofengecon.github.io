@@ -55,8 +55,7 @@ a:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; border-ra
 .question .button { color: var(--ink); background: var(--paper); border-color: var(--paper); }
 .question .button:hover { background: #fff; }
 .question .button:focus-visible { outline-color: var(--teal-on-navy); }
-.paper-actions { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; margin-top: 18px; font-family: var(--sans); font-size: 15px; }
-.paper-actions > a:not(.button) { display: inline-flex; align-items: center; min-height: 40px; }
+.paper-actions { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: flex-start; margin-top: 18px; font-family: var(--sans); font-size: 15px; }
 
 /* Sections */
 main { padding-inline: 52px; }
@@ -85,11 +84,20 @@ h3 { color: var(--muted); font-family: var(--sans); font-size: 16px; font-weight
 #research .paper p { margin-top: 3px; }
 #research .jmp .abstract { margin-top: 10px; }
 .abstract-fold { margin-top: 3px; }
-.abstract-fold summary { width: fit-content; color: var(--teal); cursor: pointer; font-family: var(--sans); font-size: 14px; font-weight: 600; line-height: 1.5; }
-.abstract-fold summary:hover { text-decoration: underline; text-underline-offset: .18em; }
-.abstract-fold summary:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; border-radius: 1px; }
+.abstract-fold summary, .pdf-menu summary { width: fit-content; color: var(--teal); cursor: pointer; font-family: var(--sans); font-size: 14px; font-weight: 600; line-height: 1.5; }
+.abstract-fold summary:hover, .pdf-menu summary:hover { text-decoration: underline; text-underline-offset: .18em; }
+.abstract-fold summary:focus-visible, .pdf-menu summary:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; border-radius: 1px; }
 #research .abstract-fold p { margin: 6px 0 4px; padding-left: 14px; border-left: 2px solid var(--rule); font-size: 16px; line-height: 1.5; }
-@media (pointer: coarse) { .abstract-fold summary { padding-block: 10px; } }
+
+/* Job market paper versions: the button opens the main text, the menu lists all three */
+.pdf-menu ul { margin: 4px 0 2px; padding: 0 0 0 12px; border-left: 2px solid var(--rule); list-style: none; }
+.pdf-menu li + li { margin-top: 2px; }
+.pdf-menu ul a { display: inline-flex; align-items: center; min-height: 30px; }
+.paper-actions .pdf-menu summary { padding-block: 9px; font-size: 15px; }
+.question .pdf-menu summary { color: var(--teal-on-navy); }
+.question .pdf-menu summary:focus-visible { outline-color: var(--teal-on-navy); }
+.question .pdf-menu ul { border-left-color: #4d5a75; }
+@media (pointer: coarse) { .abstract-fold summary, .pdf-menu summary { padding-block: 10px; } .pdf-menu ul a { min-height: 44px; } }
 
 /* Paper page */
 .findings { padding: 0; list-style: none; }
@@ -169,7 +177,7 @@ html[lang="zh-Hans"] .abstract[lang="en"] { font-family: var(--serif); font-size
   body { background: #fff; font-size: 11pt; }
   .layout { display: block; }
   .sidebar { position: static; height: auto; overflow: visible; padding: 0 0 12pt; border: 0; }
-  .site-nav, .actions, .skip, .paper-actions .button { display: none; }
+  .site-nav, .actions, .skip, .paper-actions { display: none; }
   .question { background: none; color: #000; padding: 12pt 0; }
   .question a { color: #000; }
   main, .site-footer { padding-inline: 0; }
