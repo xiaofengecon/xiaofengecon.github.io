@@ -4,8 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cathedrals Opening Bazaars | Xiaofeng Gong</title>
-  <meta name="description" content="Job market paper by Xiaofeng Gong: do firms reveal through open-source code the technologies they protect with patents, or a separate set?">
+  <meta name="description" content="Job market paper by Xiaofeng Gong: when firms publish open-source code in the technologies they patent, who participates, and how much do new participants contribute?">
   <meta name="author" content="Xiaofeng Gong">
+  <meta name="citation_title" content="Cathedrals Opening Bazaars: Firms’ Open-Source Projects and Community Participation">
+  <meta name="citation_author" content="Gong, Xiaofeng">
+  <meta name="citation_publication_date" content="2026/11/06">
+  <meta name="citation_technical_report_institution" content="University of Connecticut">
+  <meta name="citation_pdf_url" content="https://xiaofengecon.github.io/Gong_Cathedrals_Opening_Bazaars_with_appendix_2026-11-06.pdf">
   <link rel="canonical" href="https://xiaofengecon.github.io/cathedrals.html">
   <link rel="alternate" hreflang="en" href="https://xiaofengecon.github.io/cathedrals.html">
   <link rel="alternate" hreflang="zh-Hans" href="https://xiaofengecon.github.io/zh-cathedrals.html">
@@ -13,7 +18,7 @@
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Xiaofeng Gong">
   <meta property="og:title" content="Cathedrals Opening Bazaars | Xiaofeng Gong">
-  <meta property="og:description" content="Job market paper by Xiaofeng Gong: do firms reveal through open-source code the technologies they protect with patents, or a separate set?">
+  <meta property="og:description" content="Job market paper by Xiaofeng Gong: when firms publish open-source code in the technologies they patent, who participates, and how much do new participants contribute?">
   <meta property="og:url" content="https://xiaofengecon.github.io/cathedrals.html">
   <meta property="og:image" content="https://xiaofengecon.github.io/assets/xiaofeng-gong.jpg">
   <meta property="og:locale" content="en_US">
@@ -32,8 +37,8 @@
     <p class="role">Ph.D. Candidate in Economics<br>Department of Economics, University of Connecticut</p>
     <p class="market">I am on the job market in 2026–2027 and will be available for interviews at the AFA/ASSA Annual Meeting.</p>
     <div class="actions">
-      <a class="button primary" href="./files/Gong_Xiaofeng_JMP_Cathedrals_draft_2026-10-24.pdf">Job market paper (PDF)</a>
-      <a class="button" href="./files/Gong_Xiaofeng_CV_EN_2026-10-30_v2.pdf">CV (PDF)</a>
+      <a class="button primary" href="./Gong_Cathedrals_Opening_Bazaars_with_appendix_2026-11-06.pdf">Job market paper (PDF)</a>
+      <a class="button" href="./files/Gong_Xiaofeng_CV_EN_2026-11-06.pdf">CV (PDF)</a>
       <a class="email" href="mailto:xiaofeng.econ@gmail.com">xiaofeng.econ@gmail.com</a>
     </div>
     <nav class="site-nav" aria-label="Main">
@@ -48,10 +53,12 @@
 
   <div class="content">
   <section class="question" aria-labelledby="paper-title">
-    <h1 class="paper-heading" id="paper-title">Cathedrals Opening Bazaars: Placing Open-Source Software in the Patent Technology Space</h1>
-    <p>Job market paper. Xiaofeng Gong. Draft of October 24, 2026.</p>
+    <h1 class="paper-heading" id="paper-title">Cathedrals Opening Bazaars: Firms’ Open-Source Projects and Community Participation</h1>
+    <p>Job market paper. Xiaofeng Gong. This version: November 6, 2026.</p>
     <div class="paper-actions">
-      <a class="button" href="./files/Gong_Xiaofeng_JMP_Cathedrals_draft_2026-10-24.pdf">Read the paper (PDF, 163 pages)</a>
+      <a class="button" href="./Gong_Cathedrals_Opening_Bazaars_with_appendix_2026-11-06.pdf">Read the paper (PDF, 99 pages)</a>
+      <a href="./Gong_Cathedrals_Opening_Bazaars_main_2026-11-06.pdf">Main text only (34 pages)</a>
+      <a href="./Gong_Cathedrals_Opening_Bazaars_appendix_2026-11-06.pdf">Online appendix (69 pages)</a>
     </div>
   </section>
 
@@ -59,28 +66,29 @@
     <section class="section" id="question" aria-labelledby="question-title">
       <h2 id="question-title">The question</h2>
       <div class="section-body">
-        <p>Large firms that file patents now also publish open-source code, which anyone can read, use and build on. A firm that does both draws a line between the knowledge it shares and the knowledge it protects. Existing data do not show where that line runs, because open-source code carries no patent class and so cannot be compared directly with a firm’s patents.</p>
-        <p>When firms make technology public through open-source code, do they reveal the technologies they protect with patents, or a separate set?</p>
+        <p>Large firms that file patents also publish open-source code on GitHub, which anyone can read, use and build on, and anyone with an account can report a problem or propose a change. Firm-level totals cannot show whether people take part more in the projects that overlap a firm’s patented technologies. That comparison has to be made project by project, with the code and the patents in one classification, and two gaps in the data kept them apart: open-source code carries no patent class, and company databases list no GitHub accounts.</p>
+        <p>When firms publish code in the technologies they patent, who participates, and how much do new participants contribute to the firms’ projects?</p>
       </div>
     </section>
 
     <section class="section" id="finding" aria-labelledby="finding-title">
       <h2 id="finding-title">The main comparison</h2>
       <div class="section-body">
-        <p>Firms also reveal technologies they do not patent. In the average firm-year, the share of a firm’s open-source code outside its patented technologies is more than twice the share under the randomization benchmark.</p>
-        <figure class="share-figure" aria-labelledby="share-title">
-          <p class="figure-title" id="share-title">Share of a firm’s open-source code in technologies the firm does not patent</p>
-          <ul class="bars">
-            <li>
-              <div class="bar-label"><span>Observed</span><span class="bar-value">35%</span></div>
-              <div class="bar-track"><span class="bar-fill observed" style="width: 35.1%"></span></div>
-            </li>
-            <li>
-              <div class="bar-label"><span>Randomization benchmark</span><span class="bar-value">15%</span></div>
-              <div class="bar-track"><span class="bar-fill benchmark" style="width: 15.1%"></span></div>
-            </li>
-          </ul>
-          <figcaption>The full width of each bar is all of a firm’s open-source code. Average firm-year in the comparison sample of 2,472 firm-years of 595 firms, with each project weighted by its events: 35.1% observed and 15.1% under the benchmark (section 4.3, p. 20). The benchmark reassigns at random the technologies of the firm’s own patents and open-source projects.</figcaption>
+        <p>Repositories in the technologies where their firm was recently granted patents have 29.5 percent more new participants and 45.5 percent more contributions from them in the 24 months after their first active quarter. Contributions from everyone are also higher, and there is no clear difference in new participants’ share of contributions. These are associations, and the estimates leave open why.</p>
+        <figure class="result-figure" aria-labelledby="result-title">
+          <p class="figure-title" id="result-title">Inside repositories against the firm’s other repositories, over the 24 months after first activity</p>
+          <table class="results">
+            <thead>
+              <tr><th scope="col">Outcome</th><th scope="col">Difference (95 percent interval)</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">New participants</th><td>29.5 percent more <span class="interval">(14.6 to 46.4)</span></td></tr>
+              <tr><th scope="row">Contributions from new participants</th><td>45.5 percent more <span class="interval">(22.3 to 73.0)</span></td></tr>
+              <tr><th scope="row">Contributions from everyone</th><td>37.6 percent more</td></tr>
+              <tr><th scope="row">New participants’ share of contributions, among repositories with a contribution</th><td>1.02 points higher <span class="interval">(−0.52 to 2.55)</span></td></tr>
+            </tbody>
+          </table>
+          <figcaption>The main estimate (Table 4, column 4, p. 20; intervals on pp. 19, 21 and 28), on 96,854 repositories of 626 firms, with effects for each firm and year and for each main group and year, and controls for each repository’s early activity, text and language. A repository is inside when at least half of its labels lie in main groups where its firm was recently granted patents. The comparison is partly between repositories of different firms.</figcaption>
         </figure>
       </div>
     </section>
@@ -88,7 +96,7 @@
     <section class="section" id="abstract" aria-labelledby="abstract-title">
       <h2 id="abstract-title">Abstract</h2>
       <div class="section-body">
-        <p class="abstract">When firms make technology public through open-source code, do they reveal the technologies they protect with patents, or a separate set? I link Compustat firms to their USPTO patents and to their GitHub accounts, and a large language model places their open-source projects in the patent classification. In the average firm-year, 35% of a firm’s open-source code lies in technologies it does not patent, against 15% under a randomization benchmark built from the firm’s own items. The excess of the distance between its open-source code and its patents over this benchmark rises with the count of open-source projects about as much as in simulated firms that keep one technology mix at every size. Outside its patented technologies, a firm’s open-source code is less co-located with its nearest technology neighbors’ patents than under the benchmark, consistent with the stated prediction that firms reveal less where rivals can use more of what is disclosed. Within a firm, however, new participants make up a larger share of projects inside its patented technologies than of its other projects, unlike the prediction that communities participate less near patented inventions.</p>
+        <p class="abstract">This paper studies how participation in firms’ open-source projects relates to the technologies the firms patent. I link Compustat firms to their USPTO patents and GitHub accounts and use a large language model to place each project in the Cooperative Patent Classification, the scheme patent examiners use. I document that most of these projects lie in technologies in which the firm was recently granted patents. I then compare projects first active in 2015–2022, conditional on firm-by-year and technology-by-year effects and on controls for each project’s early activity, text and language. I find that projects in the firm’s patented technologies have more new participants and more contributions from them. The difference in new participants holds for people with no earlier activity on the firm’s GitHub accounts and without the five largest firms. Contributions from everyone are also higher, and among projects with a contribution there is no clear difference in new participants’ share. According to my estimates, projects in the firm’s patented technologies have 29.5 percent more new participants in the 24 months after their first active quarter, 45.5 percent more contributions from them, and 37.6 percent more contributions from everyone.</p>
       </div>
     </section>
 
@@ -96,9 +104,11 @@
       <h2 id="method-title">Data and method</h2>
       <div class="section-body">
         <ul class="findings">
-          <li><strong>Linking firms.</strong> Two crosswalks link Compustat firm records to their USPTO patents granted in 2015–2024 and to their accounts on GitHub. The comparison sample holds 595 large firms that both patent and actively publish open-source code.</li>
-          <li><strong>Classifying code.</strong> A language model reads each open-source project and assigns it main groups from the Cooperative Patent Classification, the scheme patent examiners use. When a second model applies the same two stages to patents, its labels share at least one main group with the examiners’ labels on 89% of the patents, against 21% when its labels are assigned at random within each CPC section.</li>
-          <li><strong>Comparing portfolios.</strong> The Bar–Leiponen distance is the share of a firm’s open-source code that would have to move to other main groups to match its patents, measured over the five years ending in each firm-year. Two small portfolios are some distance apart even when their technologies are assigned at random, so I compare each distance with its randomization benchmark. The observed distance minus the benchmark distance is the excess.</li>
+          <li><strong>Linking firms.</strong> Crosswalks link Compustat firms to their USPTO patents and to their GitHub accounts, and each link records its evidence and the year in which the firm owns the account. The patent crosswalk covers 99.7% of the 2015–2021 patents that DISCERN links to firms headquartered in the United States.</li>
+          <li><strong>Classifying code.</strong> A large language model reads each repository’s name, description, topics, programming language and README, and assigns it main groups of the Cooperative Patent Classification, the detailed classes that patent examiners assign. Its labels share at least one main group with those of the European Patent Office’s text categorizer for 76.4% of the repositories both classify, against 38.5% when the label sets are dealt out at random within the same CPC section.</li>
+          <li><strong>Inside.</strong> A repository is inside when at least half of its label weight lies in main groups where its firm was granted patents in the five grant years up to its first activity. Of the 102,987 repositories first active in 2015–2022, 79.7% are inside, so the comparison is with the minority outside.</li>
+          <li><strong>Participation.</strong> A contribution is an issue, a pull request, a review or a comment in GH Archive’s record of GitHub’s public events, with bots left out. A new participant has no activity on the repository through its first active quarter and makes a first contribution in the following eight quarters.</li>
+          <li><strong>Estimation.</strong> Poisson pseudo-maximum likelihood, with firm-by-year and main-group-by-year effects and controls for each repository’s founding-quarter activity, text and language. Standard errors are clustered by firm, and p-values are adjusted by Holm’s method for the outcomes tested together.</li>
         </ul>
       </div>
     </section>
@@ -107,10 +117,10 @@
       <h2 id="findings-title">Findings</h2>
       <div class="section-body">
         <ul class="findings">
-          <li><strong>Outside the patented set.</strong> In the average firm-year, 35% of a firm’s open-source code lies in technologies it does not patent, against 15% under the benchmark.</li>
-          <li><strong>Across program size.</strong> The excess rises with the count of open-source projects about as much as in simulated firms that keep one technology mix at every size.</li>
-          <li><strong>Near technology neighbors.</strong> Outside its patented technologies, a firm’s open-source code is less co-located with its nearest technology neighbors’ patents than under the benchmark. This is consistent with the stated prediction that firms reveal less where rivals can use more of what is disclosed.</li>
-          <li><strong>New participants.</strong> Within a firm, new participants make up a larger share of projects inside its patented technologies than of its other projects. This differs from the prediction that communities participate less near patented inventions.</li>
+          <li><strong>More new participants.</strong> Inside repositories have 29.5 percent more new participants in their first two years than other repositories (95 percent interval 14.6 to 46.4).</li>
+          <li><strong>More contributions from both groups.</strong> Contributions from new participants are 45.5 percent higher, and contributions from everyone are 37.6 percent higher. Among repositories with a contribution, new participants’ share of contributions is 1.02 points higher inside (95 percent interval −0.52 to 2.55), so the estimates do not establish that new participants account for a larger share.</li>
+          <li><strong>People new to the firm.</strong> For new participants with no earlier activity at the firm on GitHub, the difference is 27.6 percent. Without the five largest firms, the estimates for new participants and their contributions are 28.1 and 40.1 percent.</li>
+          <li><strong>Published perspectives.</strong> The positive difference runs against the prediction of less participation in code tied to patents. Five contrasts for where the difference should be larger, specified before the results, give no statistically clear support for their predictions.</li>
         </ul>
       </div>
     </section>
@@ -119,10 +129,12 @@
       <h2 id="limits-title">How far the results go</h2>
       <div class="section-body">
         <ul class="limits">
-          <li>The paper measures where firms’ open-source code lies. Several reasons for opening predict the same signs, so these comparisons cannot tell the reasons apart.</li>
-          <li>In the typical firm-year, most of the excess lies outside the firm’s patented technologies. In the largest programs and at coarser levels of the classification, most of it lies inside them, where code and patents differ in their shares across patent classes.</li>
-          <li>The labels come from a language model, and checks against other classifications find agreement in many cases, but not all.</li>
-          <li>The data omit the open-source code of accounts I cannot link to a firm, and the sample covers large listed firms that both patent and publish open-source code.</li>
+          <li>These are conditional associations. Project importance, audience and corporate support remain possible explanations, and the estimates leave open why.</li>
+          <li>Inside records shared technology classes, not whether a patent covers a repository’s code, and a grant can come after a repository’s first activity.</li>
+          <li>The comparison is partly between repositories of different firms.</li>
+          <li>Reading, downloading and running code leave no trace in the record, so the data cannot tell whether inside repositories have more users or a larger share of users who leave work on them.</li>
+          <li>The model read each repository’s text as it stood in 2026, after every outcome window.</li>
+          <li>Participants are described by their earlier activity on GitHub, and no one is matched to an employer.</li>
         </ul>
       </div>
     </section>
@@ -130,13 +142,13 @@
     <section class="section" id="cite" aria-labelledby="cite-title">
       <h2 id="cite-title">How to cite</h2>
       <div class="section-body">
-        <p class="citation">Gong, Xiaofeng. 2026. “Cathedrals Opening Bazaars: Placing Open-Source Software in the Patent Technology Space.” Working paper, draft of October 24, 2026.</p>
-        <p>This is a draft, and the PDF is the reference for every number on this page.</p>
+        <p class="citation">Gong, Xiaofeng. 2026. “Cathedrals Opening Bazaars: Firms’ Open-Source Projects and Community Participation.” Working paper, version of November 6, 2026.</p>
+        <p>The PDF is the reference for every number on this page.</p>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">Xiaofeng Gong, Department of Economics, University of Connecticut. Updated October 2026.</footer>
+  <footer class="site-footer">Xiaofeng Gong, Department of Economics, University of Connecticut. Updated November 2026.</footer>
   </div>
   </div>
 </body>

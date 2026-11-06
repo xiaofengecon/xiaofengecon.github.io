@@ -56,6 +56,7 @@ a:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; border-ra
 .question .button:hover { background: #fff; }
 .question .button:focus-visible { outline-color: var(--teal-on-navy); }
 .paper-actions { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; margin-top: 18px; font-family: var(--sans); font-size: 15px; }
+.paper-actions > a:not(.button) { display: inline-flex; align-items: center; min-height: 40px; }
 
 /* Sections */
 main { padding-inline: 52px; }
@@ -110,6 +111,17 @@ h3 { color: var(--muted); font-family: var(--sans); font-size: 16px; font-weight
 .bar-fill { display: block; height: 100%; border-radius: 0 4px 4px 0; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
 .bar-fill.observed { background: var(--ink); }
 .bar-fill.benchmark { background: #66758c; }
+
+/* Paper page results: one row per outcome */
+.result-figure { margin: 24px 0 0; }
+.result-figure .figure-title { margin-bottom: 10px; font-family: var(--sans); font-size: 16px; font-weight: 600; line-height: 1.5; }
+.result-figure figcaption { margin-top: 12px; color: var(--muted); font-family: var(--sans); font-size: 14px; line-height: 1.5; }
+.results { width: 100%; border-collapse: collapse; font-family: var(--sans); font-size: 15px; line-height: 1.45; }
+.results th, .results td { padding: 9px 0; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
+.results thead th { padding-top: 0; color: var(--muted); font-size: 13px; font-weight: 600; border-bottom: 2px solid var(--ink); }
+.results tbody th { width: 52%; padding-right: 18px; font-weight: 400; }
+.results td { font-weight: 600; }
+.results .interval { display: block; color: var(--muted); font-weight: 400; }
 
 /* Footer */
 .site-footer { padding: 24px 52px 40px; border-top: 1px solid var(--rule); color: var(--muted); font-family: var(--sans); font-size: 14px; }
